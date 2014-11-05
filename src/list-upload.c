@@ -178,9 +178,18 @@ main (int argc, char *argv[])
       listserv_destroy (l);
       return 1;
     }
-    temp = g_alloca (strlen (argv[3]) + strlen (listname) + 7);
+    temp = g_alloca (strlen (argv[3]) + strlen (listname) + 7 + 18);//18 == " Firstname Surname"
     g_sprintf (temp, "ADD %s %s", listname, argv[3]);
-    g_printf ("%s\n", listserv_command (l, temp));
+    const char* ret = listserv_command (l, temp);
+    if (strstr (ret, "Please specify ")) {
+        g_sprintf (temp, "ADD %s %s Surname", listname, argv[3]);
+	ret = listserv_command (l, temp);
+	if (strstr (ret, "Please specify ")) {
+            g_sprintf (temp, "ADD %s %s Firstname Surname", listname, argv[3]);
+            ret = listserv_command (l, temp);
+	}
+    }
+    g_printf ("%s\n", ret);
     g_free (listname);
     break;
   case 'm':
