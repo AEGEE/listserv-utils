@@ -58,7 +58,7 @@ To:");
   return gmtneg;
 }
 
-inline char*
+static char*
 insert_new_lines (char *text, int format)
 //format 0 - text, 1 - html
 {
@@ -109,7 +109,7 @@ insert_new_lines (char *text, int format)
   return g_string_free(str, FALSE);
 }
 
-void
+static void
 mailing_onelist (gpointer p1,
 		 gpointer p2,
 		 gpointer p3)

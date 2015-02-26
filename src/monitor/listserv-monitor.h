@@ -19,8 +19,6 @@ unsigned int longest_modulename;
 char* disabled_module;
 GPtrArray *modules;
 int sendmail (char **, const char*, const char*, const char*);
-void mailing_onelist (gpointer, gpointer, gpointer);
 void mailing_alllists (GHashTable*);
 char* print_report (GHashTable *gh, struct listserv *l, int format);
 void mail_report (GHashTable *gh, struct listserv *l);
-char* insert_new_lines(char* text, int format);
