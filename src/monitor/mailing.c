@@ -128,8 +128,8 @@ mailing_onelist (gpointer p1,
   g_string_append_printf (mailtext, "Hello,\r\n\
 \r\n\
 You manage the mailing list %s!\r\n\r\n\
-This is an automated message to help you improve and secure your list against\r\n\
-spam or make it conform to the AEGEE policies for mailing lists.  Please read\r\n\
+This is an automated message to help you improve and secure your list against \r\n\
+spam or make it conform to the AEGEE policies for mailing lists.  Please read \r\n\
 each section which helps you improve one detail.\r\n\r\n", listname);
   unsigned int i;
   for (i = 0; i < modules->len; i++)
@@ -154,15 +154,15 @@ The AEGEE Mail Team\r\n\
   sip:   8372@aegee.org\r\n\
 \r\n\
 == How to Login ===============================================================\r\n\
-You manage this list with the email address, where this email is sent (check\r\n\
-the To: header).  If you don't have yet a password associated within listserv\r\n\
-for this email address, obtain a new one from https://lists.aegee.org/pw . Once\r\n\
-a new password is requested you will get an email.  Click on the link in this\r\n\
-email to activate the password.  Please note, that this password is used\r\n\
-solely to manage your lists in AEGEE, it does not have to be the password you\r\n\
+You manage this list with the email address, where this email is sent (check \r\n\
+the To: header).  If you don't have yet a password associated within \r\n\
+listserv for this email address, obtain a new one from https://lists.aegee.org/pw . \r\n\
+Once a new password is requested you will get an email.  Click on the link in \r\n\
+this email to activate the password.  Please note, that this password is used \r\n\
+solely to manage your lists in AEGEE, it does not have to be the password you \r\n\
 use to login in your mailbox.\r\n");
     char* subj = g_strconcat ("Your list ", listname, NULL);
-    sendmail (rcpts, subj, "text/plain; charset=UTF-8", mailtext->str);
+    sendmail (rcpts, subj, "text/plain; charset=UTF-8; format=flowed", mailtext->str);
     g_free (subj);
   }
   g_string_free (mailtext, TRUE);

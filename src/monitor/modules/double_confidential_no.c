@@ -91,14 +91,14 @@ double_confidential_no_LTX_listowners_mailing (char *listname)
   int plural = (strchr(elem, ' ') != NULL);
   return g_strconcat ("\
 == One Visible List per Antenna / Project / WG ===============================\r\n\
-Since the list of visible lists at https://lists.aegee.org is overcrowded,\r\n\
-only one list per body can be listed there.  The latter does not apply for\r\n\
-lists with more than 1000 subscribers.\r\n\
+Since the list of visible lists at https://lists.aegee.org is overcrowded, \r\n\
+only one list per body can be listed there.  The latter does not apply for \r\n\
+lists with more than 1000 subscribers. \r\n\
 Your body has the following lists visible:\r\n    ", elem, "\r\n\
-Please decide which ", plural ? "of there lists" : "list", " shall be hidden. Then go to\r\n\
-  https://lists.aegee.org/cgi-bin/wa?WIZARD=", listname, "&P=WIZARD_TASK&a=2\r\n \
-and login.  At the end of this email you can find information how to login.\r\n\
-\r\n\
+Please decide which ", plural ? "of these lists" : "list", " shall be hidden. Then go \r\n\
+to https://lists.aegee.org/cgi-bin/wa?WIZARD=", listname,
+"&P=WIZARD_TASK&a=2 and login.  At the end of this email you can find \r\n"
+"information how to login.\r\n\r\n\
 Find the keyword *Confidential* and set its value to \"Yes\".\r\n\
 \r\n\
 Then click on Safe at the end of the page.", NULL);

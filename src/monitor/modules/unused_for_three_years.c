@@ -17,7 +17,7 @@ unused_for_three_years_LTX_listowners_mailing (const char const *listname  __att
 {
   return strdup("\
 == Unused list for at least one year =========================================\r\n\
-Your list was not used in the last three years.  Would you mind if it is deleted?\r\n\
-Shall you need to ask a friend of yours before deciding, please do so on\r\n\
-your own and let us know the final result.");
+Your list was not used in the last three years.  Would you mind if it is \r\n\
+deleted?  Shall you need to ask a friend of yours before deciding, please do \r\n\
+so on your own and let us know the final result.");
 }

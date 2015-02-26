@@ -22,11 +22,11 @@ never_actively_used_LTX_listowners_mailing (const char const * listname)
 {
   return g_strconcat("\
 == Not yet active ==========================================================\r\n\
-Your newly created list is not active yet.  Do you need some assitance\r\n\
+Your newly created list is not active yet.  Do you need some assitance \r\n\
 to manage the list?  You can reply to this email, and we will help you to \r\n\
-start!  At the end of this email you can check how to login at\r\n\
-  https://lists.aegee.org/cgi-bin/wa?A0=", listname, "\r\n\
-Then you can choose (from the top) List Management -> Subscriber Management to\r\n\
+start!  At the end of this email you can check how to login at \r\n\
+https://lists.aegee.org/cgi-bin/wa?A0=", listname, ".  \r\n\
+Then you can choose (from the top) List Management -> Subscriber Management to \r\n\
 add new subscribers.  It's easy!", NULL);
 }
 
