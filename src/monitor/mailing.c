@@ -41,7 +41,7 @@ To:");
 	  gmtneg ? '-' : '+', gmtoff / 60, gmtoff % 60);
   g_string_append_printf (message, "Subject: %s\r\n", subject);
   g_string_append_printf (message,
-			  "Auto-Submitted: yes\r\n");
+			  "Auto-Submitted: auto-generated\r\n");
   g_string_append_printf (message,
 			  "User-Agent: listserv-monitor 1.0\r\n");
   g_string_append_printf (message, "MIME-Version: 1.0\r\n");
