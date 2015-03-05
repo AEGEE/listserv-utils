@@ -114,7 +114,7 @@ char*
 unused_for_one_year_LTX_listowners_mailing (const char const *listname __attribute__ ((unused)))
 {
   return strdup("\
-== Unused list for at least one year =========================================\r\n\
+== Unused list for one year ==================================================\r\n\
 Your list was not used in the last year.  Would you mind if it is \r\n\
 deleted?  Shall you need to ask a friend of yours before deciding, please \r\n\
 do so on your own and let us know the final result.");

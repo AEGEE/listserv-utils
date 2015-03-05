@@ -16,7 +16,7 @@ char*
 unused_for_six_years_LTX_listowners_mailing (const char const *listname  __attribute__ ((unused)))
 {
   return strdup("\
-== Unused list for at least six years ========================================\r\n\
+== Unused list for at least years ============================================\r\n\
 Your list was not used in the last six years.  Would you mind if it is \r\n\
 deleted?  Shall you need to ask a friend of yours before deciding, please do \r\n\
 so on your own and let us know the final result.");

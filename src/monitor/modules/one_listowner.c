@@ -37,7 +37,7 @@ AEGEE mailing lists.  In turn the lists don't have anymore a listowner and it \r
 is a lot of work for the AEGEE Mail Team to find the current addresses of the \r\n\
 listonwers or take the right decision what to do with the mailing list.\r\n\
 \r\n\
-To avoid this sutiuation, which is real and does happen, all AEGEE mailing \r\n\
+To avoid this situation, which is real and does happen, all AEGEE mailing \r\n\
 lists must have at least two listowners.  Please agree with a friend to \r\n\
 co-manage the mailing list and add her/his email address as second listowner. \r\n\
 To do this, go to \r\n\
