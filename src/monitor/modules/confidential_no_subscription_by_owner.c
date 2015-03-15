@@ -25,10 +25,10 @@ there, some restrictions apply to the visible lists:\r\n\
   * Only lists where everybody can subscribe\r\n\
 \r\n\
 Your list does not conform to the last criteria - the subscription request \r\n\
-from potential new lists members is subject to approval by the list owners. \r\n\
-Provided that your antenna, project or working group does not yet have a \r\n\
-visible mailing lists you can choose between hiding the list or making the \r\n\
-subscription process unconditional.  If your body prefers to have another \r\n\
+from potential new lists members is subject to approval by the list \r\n\
+owners.  Provided that your antenna, project or working group does not yet \r\n\
+have a visible mailing lists you can choose between hiding the list or making \r\n\
+the subscription process unconditional.  If your body prefers to have another \r\n\
 list visible, then you must make this one invisible.\r\n\
 \r\n\
 To update the settings of ", listname, " go to \r\n\
