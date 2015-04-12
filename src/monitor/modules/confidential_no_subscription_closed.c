@@ -32,7 +32,7 @@ If your body prefers to have another list visible, then you must make this \r\n\
 one invisible.\r\n\
 \r\n\
 To update the settings of ", listname, " go to \r\n\
-https://lists.aegee.org/cgi-bin/wa?WIZARD=", listname, "&P=WIZARD_TASK&a=2 \r\n\
+https://lists.aegee.org/?WIZARD=", listname, "&P=WIZARD_TASK&a=2 \r\n\
 and login.  At the end of this email you can find information how to login.\r\n\
 \r\n\
 To enable everybody to join your list, set for *Subscription* the value _Open_.\r\n\

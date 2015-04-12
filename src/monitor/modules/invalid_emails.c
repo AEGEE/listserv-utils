@@ -98,7 +98,7 @@ Some email addresses in the configuration of ", listname, " \r\n\
 seem to be misspelled.  Namely:\r\n  ",
 		     g_hash_table_lookup(invalid_emails_hashtable, listname),
 "\r\n\r\nPlease log in at \r\n\
-https://lists.aegee.org/cgi-bin/wa?HDRED1=", listname, " \r\n\
+https://lists.aegee.org/?HDRED1=", listname, " \r\n\
 and correct the addresses.  At the end of this email you can find \r\n\
 information how to login.", NULL);
 }

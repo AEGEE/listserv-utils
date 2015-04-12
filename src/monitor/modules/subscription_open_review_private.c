@@ -46,7 +46,7 @@ that if you go for this option, your list may not stay visible at \r\n\
 https://lists.aegee.org (in case it is already there).\r\n\
 \r\n\
 To resolve the problem go to \r\n\
-  https://lists.aegee.org/cgi-bin/wa?WIZARD=", listname, "&P=WIZARD_TASK&a=2 .\r\n\
+  https://lists.aegee.org/?WIZARD=", listname, "&P=WIZARD_TASK&a=2 .\r\n\
 At the end of this email you can find information how to login.\r\n\
 \r\n\
 To restrict who can see the emails of the subscribers, search for \"Review\" \r\n\

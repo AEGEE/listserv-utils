@@ -96,7 +96,7 @@ only one list per body can be listed there.  The latter does not apply for \r\n\
 lists with more than 1000 subscribers. \r\n\
 Your body has the following lists visible:\r\n    ", elem, "\r\n\
 Please decide which ", plural ? "of these lists" : "list", " shall be hidden. Then go \r\n\
-to https://lists.aegee.org/cgi-bin/wa?WIZARD=", listname,
+to https://lists.aegee.org/?WIZARD=", listname,
 "&P=WIZARD_TASK&a=2 and login.  At the end of this email you can find \r\n"
 "information how to login.\r\n\r\n\
 Find the keyword *Confidential* and set its value to \"Yes\".\r\n\

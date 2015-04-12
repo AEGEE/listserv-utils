@@ -41,7 +41,7 @@ To avoid this situation, which is real and does happen, all AEGEE mailing \r\n\
 lists must have at least two listowners.  Please agree with a friend to \r\n\
 co-manage the mailing list and add her/his email address as second listowner. \r\n\
 To do this, go to \r\n\
-https://lists.aegee.org/cgi-bin/wa?HDRED1=", listname, ". \r\n\
+https://lists.aegee.org/?HDRED1=", listname, ". \r\n\
 (At the end of this email is explained how to login.)  Find the line with \r\n\
 \"Owner=\", and write after it:\r\n\
   Owner = email@address (Name Surname)\r\n\
