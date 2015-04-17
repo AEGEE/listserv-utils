@@ -30,35 +30,43 @@ Then you can choose (from the top) List Management -> Subscriber Management to \
 add new subscribers.  It's easy!", NULL);
 }
 
-static void remove_mail(struct listserv *l, const char const *listname) {
-  if (strcmp(listname, "LISTOWNERS-L") == 0) return;//don't remove mail@ from LISTOWNERS-L
-  char * cmd = malloc (strlen(listname) + 40);
-  sprintf(cmd, "QUIET DEL %s mail@aegee.org", listname);
+static void remove_mail (struct listserv *l, const char const *listname) {
+  //don't remove mail@ from LISTOWNERS-L
+  if (strcmp (listname, "LISTOWNERS-L") == 0
+      || strcmp (listname, "EUROPEAN-BODIES-L") == 0
+      || strcmp (listname, "AEGEE-L") == 0
+      || strcmp (listname, "ANNOUNCE-L") == 0) return;
+  char * cmd = alloca (strlen(listname) + 40);
+  sprintf (cmd, "QUIET DEL %s mail@aegee.org", listname);
   listserv_command (l, cmd);
-  free (cmd);
 }
 
 char
 never_actively_used_LTX_changed_list (struct listserv *l, const char const * listname) {
   int num_postings = 0;
+  char** files = listserv_list_filelist(l, listname);
+
   if (keyword_doesnot_contain (l, listname, "Change-Log", "No")) {
-    char *changelog = listserv_get(l, listname, "CHANGELOG");
-    if (changelog[0] != 'F') {
-      //char* last_date = NULL;
-      while ((changelog = g_strstr_len (changelog, -1, " POST "))) {
-	if (changelog) {
-	  changelog += 6;
-	} else break;
-	num_postings++;
-	if (num_postings > 6) {
-	  g_hash_table_steal (never_actively_used_hashtable, listname);
-	  remove_mail (l, listname);
-	  return 0;
+    for (int i = 0; files[i]; i++) {
+      if (files[i][0] == 'L') continue;
+      // files[i] is here a changelog-file
+      char *changelog = listserv_get(l, listname, files[i]);
+      if (changelog[0] != 'F') {
+          //char* last_date = NULL;
+	  while ((changelog = g_strstr_len (changelog, -1, " POST "))) {
+	    if (changelog)
+	      changelog += 6;
+	    else break;
+	    num_postings++;
+	    if (num_postings > 6) {
+	      g_hash_table_steal (never_actively_used_hashtable, listname);
+	      remove_mail (l, listname);
+	      return 0;
+	    }
+	  }
 	}
-      }
     }
   }
-  char **files = listserv_list_filelist (l, listname);
   num_postings = 0;
   int num_logfiles = 0;
   while (files[num_logfiles]) {
